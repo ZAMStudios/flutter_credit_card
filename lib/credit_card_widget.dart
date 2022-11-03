@@ -595,7 +595,7 @@ class _CreditCardWidgetState extends State<CreditCardWidget>
     if (customCardTypeIcon.isNotEmpty) {
       return customCardTypeIcon.first.cardImage;
     } else {
-      return Image.asset(
+      return cardType==CardType.otherBrand?SizedBox():Image.asset(
         CardTypeIconAsset[cardType]!,
         height: 48,
         width: 48,
